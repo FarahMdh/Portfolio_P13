@@ -17,37 +17,12 @@ function closeOverlay() {
 }
 
 
-// set up text to print, we only have one line now
-var aText = new Array("Work with me!");
-var iSpeed = 100; // time delay of print out
-var iIndex = 0; // start printing array at this position
-var iArrLength = aText[0].length; // the length of the text array
-var iScrollAt = 20; // start scrolling up at this many lines
+// pour relier la modale de contact au bouton Contact sur l'accueil 
+const contactTrigger = document.querySelector("#contact-me");
 
-var iTextPos = 0; // initialise text position
-var sContents = ''; // initialise contents variable
-var iRow; // initialise current row
+contactTrigger.addEventListener("click", toggleModal);
 
-function typewriter() {
-  sContents = ' ';
-  iRow = Math.max(0, iIndex - iScrollAt);
-  var destination = document.getElementById("typedtext");
-
-  while (iRow < iIndex) {
-    sContents += aText[iRow++] + '<br />';
-  }
-  destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
-  if (iTextPos++ == iArrLength) {
-    iTextPos = 0;
-    iIndex++;
-    if (iIndex != aText.length) {
-      iArrLength = aText[iIndex].length;
-      setTimeout(typewriter, 500);
-    }
-  } else {
-    setTimeout(typewriter, iSpeed);
-  }
+function toggleModal(event) {
+  event.preventDefault();
+  modalContainer.classList.toggle("active");
 }
-
-// Call the typewriter function when the DOM is ready
-document.addEventListener("DOMContentLoaded", typewriter);
