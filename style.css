@@ -13,7 +13,7 @@ Tags: (Mots-clés du thème, séparés par des virgules)
 
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 body {
     background-color: white;
@@ -26,11 +26,11 @@ body {
 /* HEADER */
 
 .site-logo img {
-    height: 50px;
+    height: 60px;
 }
 
 .site-header {
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 .container {
@@ -79,7 +79,7 @@ body {
 .menu li:hover::after {
     width: 100%;
     height: 3px;
-    background-color: #413E70;
+    background-color: #878DFF;
 }
 
 /* FOOTER */ 
@@ -96,6 +96,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    z-index: -1;
 }
 
 .footer-menu a {
@@ -107,7 +108,7 @@ body {
 }
 
 .footer-menu a:hover {
-    color: #413E70;
+    color: #878DFF;
 }
 
 .footer-menu li {
@@ -132,7 +133,7 @@ body {
 .footer-menu li:hover::after {
     width: 100%;
     height: 3px;
-    background-color: #413E70;
+    background-color: #878DFF;
 }
 
 /* MODAL DE CONTACT */
@@ -232,10 +233,64 @@ body {
     width: 271px;
     text-transform: uppercase;
     font-size: 15px;
+    background-color: #878DFF;
+    color: white;
     
 }
 
 .wpcf7-form-control.has-spinner.wpcf7-submit:hover {
-    background-color: #413E70;
+    background-color: #787eee;
     color: white;
+}
+
+/* PAGE D'ACCUEIL */
+
+/* HERO TITLE & DESCRIPTION */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-title {
+    font-size: 23px;
+    margin-top: 50px;
+}
+
+.hero-title h1 {
+    margin-bottom: 7px;
+}
+
+.colored-word {
+    color: #878DFF;
+}
+
+.hero-description {
+    display: flex;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* HERO BUTTON */
+
+#contact-me {
+    height: 46px;
+    width: 149px;
+    border-radius: 6px;
+    border: 2px;
+    font-size: 15px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    background-color: #878DFF;
+    color: white;
+    cursor: pointer;
+}
+
+#contact-me:hover {
+    background-color: #787eee
 }

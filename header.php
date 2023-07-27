@@ -4,6 +4,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
+    <script src="https://kit.fontawesome.com/94712dee56.js" crossorigin="anonymous"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -14,7 +15,7 @@
 
             <div class="site-logo">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/logo.png" alt="Logo">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/logoFpoint.svg" alt="Logo">
                 </a>
             </div>
 
