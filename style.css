@@ -36,8 +36,10 @@ body {
 .container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 75px;
+    margin-left: 125px;
+    margin-right: 125px;
 }
 
 .main-menu {
@@ -309,4 +311,175 @@ body {
 
 #contact-me:hover {
     background-color: #787eee
+}
+
+/* SINGLE-SITES Style */
+
+/* FIRST SECTION : TITLE */
+.single-post-container {
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.post-content {
+    margin-left: 125px;
+    margin-right: 125px;
+    margin-top: 30px;
+}
+
+.first-section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.title_ref {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.post-title {
+    font-family: 'Inter';
+    font-style: italic; 
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 66px;
+    margin-bottom: 23px;
+    margin-top: 0;
+    position: relative
+}
+
+
+/* Sélecteur pour le point */
+.post-title::after {
+    content: '.'; /* Ajoute un point après le titre */
+    color: #878DFF; /* Couleur du point (violet) */
+    position: absolute; /* Position absolue pour positionner le point */
+    top: auto; 
+    right: auto;
+}
+
+
+.line-break-title {
+    line-height: 0.9; 
+  }
+  
+
+.post-thumbnail img {
+    object-fit: contain;
+    width: 618px;
+    height: 514px;
+    border-radius: 10px;
+}
+
+.post-thumbnail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* FIRST SECTION : REFERENCE : BOUTON GITHUB - DESCRIPTION - LANGAGES */
+
+.ref {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    justify-content: flex-end;
+}
+
+.post-description {
+    text-transform: none;
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+
+.post-year {
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+
+/* BOUTON GITHUB */
+
+.github-button {
+    height: 46px;
+    width: 149px;
+    border-radius: 6px;
+    border: 2px;
+    background-color: #878DFF;
+    cursor: pointer;
+}
+
+.github-button:hover {
+    background-color: #787eee
+}
+
+.github-button a {
+    color: white;
+    font-size: 15px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+/* WEB TECHNOS */
+.langage-category {
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.tag {
+    background-color: #878dff36; 
+    padding: 6px 17px; /* Espacement interne des étiquettes */
+    margin-right: 10px; /* Espace à droite de chaque étiquette */
+    border-radius: 20px;
+}
+
+
+/* SECOND SECTION */
+
+.second-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+/* navigation des photos */
+.photo-navigation {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    min-height: 104px;
+    margin-left: 200px;
+}
+
+.mini-thumbnail {
+    display: none;
+    width: 80px;
+    height: 70px;
+}
+
+.photo-navigation a:hover + .mini-thumbnail{
+    display: block;
+}
+
+.arrow-left-thumbnail, .arrow-right-thumbnail {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.arrow-right-thumbnail {
+    align-items: flex-start;
+    min-width: 80px;
+}
+
+.arrow-left-thumbnail {
+    align-items: flex-end;
+    min-width: 80px;
 }

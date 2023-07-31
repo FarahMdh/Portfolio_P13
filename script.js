@@ -26,3 +26,4 @@ function toggleModal(event) {
   event.preventDefault();
   modalContainer.classList.toggle("active");
 }
+
