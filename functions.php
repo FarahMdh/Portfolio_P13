@@ -14,7 +14,13 @@
     add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
     
-    function portfolio_setup() {
+    function portfolio_setup() {                                         // pour ajouter "image mise en avant" sur la création de posts 
         add_theme_support( 'post-thumbnails' );
     }
     add_action( 'after_setup_theme', 'portfolio_setup' );
+
+
+
+
+    add_image_size('custom-thumbnail', 300, 200, true);                 // pour ajouter une nouvelle taille d'image
+

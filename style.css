@@ -91,14 +91,12 @@ body {
     align-items: center;
     justify-content: center;
     gap: 50px;
-    height: 75px;
-    position: fixed; 
+    height: 75px; 
     left: 0;
     bottom: 0;
     width: 100%;
     margin: 0;
     padding: 0;
-    z-index: -1;
 }
 
 .footer-menu a {
@@ -138,6 +136,32 @@ body {
     height: 3px;
     background-color: #878DFF;
 }
+
+/* FLECHE SCROLL TO TOP */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f0f0f0;
+    color: #878DFF;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    text-align: center;
+    line-height: 1;
+    z-index: 999;
+    transition: opacity 0.3s;
+  }
+  
+.scroll-to-top:hover {
+    opacity: 0.8;
+}
+  
+
+html {
+    scroll-behavior: smooth;            /* pour activer le défilement fluide pour tous les liens d'ancrage */
+  }
 
 /* MODAL DE CONTACT */
 
@@ -202,6 +226,13 @@ body {
     justify-content: center;
 }
 
+.wpcf7-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .wpcf7.js,
 .wpcf7-submit {
     display: flex;
@@ -214,7 +245,6 @@ body {
     color: black;
     font-size: 12px;
     font-style: normal;
-    margin: 16px;
 }
 
 
@@ -233,13 +263,19 @@ body {
 }
 
 .wpcf7-form-control.has-spinner.wpcf7-submit {
-    width: 271px;
-    text-transform: uppercase;
+    width: 149px;
+    height: 46px;
     font-size: 15px;
     background-color: #878DFF;
     color: white;
+    border: none;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
     
 }
+
 
 .wpcf7-form-control.has-spinner.wpcf7-submit:hover {
     background-color: #787eee;
@@ -255,11 +291,14 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 260px;
+    cursor: default;
 }
 
 .hero-title {
     font-size: 23px;
     margin-top: 50px;
+    margin-bottom: 30px
 }
 
 .hero-title h1 {
@@ -273,10 +312,11 @@ body {
 .hero-description {
     display: flex;
     text-align: center;
-    font-size: 15px;
+    font-size: 17px;
     font-family: 'Montserrat';
     font-weight: 500;
     line-height: 1.4;
+    margin-bottom: 30px
 }
 
 .bold-word {
@@ -317,7 +357,7 @@ body {
 
 /* FIRST SECTION : TITLE */
 .single-post-container {
-    background-color: #f6f6f6;
+    background-color: #edf2f8;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -483,3 +523,231 @@ body {
     align-items: flex-end;
     min-width: 80px;
 }
+
+/* TEMPLATE HOME */
+
+/* PROJECTS SECTION */
+
+.projects-section {
+    background-color: #edf2f8;
+    margin-bottom: 50px;
+    padding-bottom: 100px;
+}
+
+.projects_section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    padding-top: 50px;
+    cursor: default;
+}
+
+.projects_section-thumbnail {
+    margin: 40px 140px;
+    gap: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumbnail img {
+    width: 210px;
+    height: 140px;
+    object-fit: contain;
+}
+
+.thumbnail-card {
+    background-color: white;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 315px;
+    width: 260px;
+    transition: box-shadow 0.3s;
+}
+
+.thumbnail-card:hover {
+    box-shadow: 0 16px 24px rgba(42, 42, 42, 0.2);
+}
+
+.thumbnail {
+    position: relative;
+    margin-top: 27px;
+}
+
+.thumbnail-hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}   
+
+.thumbnail-hover__eye, 
+.thumbnail-hover__link {
+    position: absolute;
+    top: 35%;
+    left: 43%;
+    cursor: pointer;
+}
+
+.thumbnail-hover__eye {
+    font-size: 25px;
+}
+
+.thumbnail.is-hovered .thumbnail-hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.thumbnail-hover__link img {
+    height: 30px;
+    width: 91px;
+}
+
+.thumbnail.is-hovered {
+    filter: grayscale(80%); /* Ajoute un effet de grisage */
+}
+  
+  
+.thumbnail.is-hovered img {
+    filter: grayscale(0%); /* Annule l'effet de grisage au survol */
+}
+
+/* INSIDE CARD */
+
+.thumbnail_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thumbnail_info-title {
+    font-size: 14px;
+    cursor: default;
+}
+
+/* Sélecteur pour le point */
+.thumbnail-title::after {
+    content: '.'; /* Ajoute un point après le titre */
+    color: #878DFF; /* Couleur du point (violet) */
+    position: absolute; /* Position absolue pour positionner le point */
+    top: auto; 
+    right: auto;
+    font-weight: 600;
+}
+
+.thumbnail_info-langages {
+    font-size: 10px;
+    display: flex;
+    flex-basis: fit-content;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    font-weight: 500;
+    cursor: default;
+}
+
+
+/* SKILLS SECTION */ 
+
+.skills-section {
+    margin-bottom: 170px;
+    cursor: default;
+}
+
+.skills_section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.skills_component {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+/* CV SECTION */
+
+.skills_cv {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills_section-cv {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.skills_section-date {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    color: #878DFF;
+}
+
+.info-title {
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+
+.info-description {
+    font-family: 'Montserrat';
+    font-size: 15px;
+    color: #6b7688;
+}
+
+/* ITEM SECTION */
+
+.skills-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skills-item img {
+    height: 58px;
+    width: 50px;
+    object-fit: contain;
+}
+
+.skills-logo {
+    background-color: rgb(237, 242, 248);
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills_section-item {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    GRID-GAP: 61px;
+}
+
+.skills-item p {
+    color: #6b7688;
+    font-family: 'Montserrat';
+    font-size: 15px;
+}
+
