@@ -1,6 +1,7 @@
 <?php /* Template Name: Page d'accueil */ ?>
 
 <?php get_header(); ?>
+<main class="main-body">
 
 <div class="hero">
     <div class="hero-title">
@@ -8,7 +9,7 @@
     </div>
 
     <div class="hero-description">
-        <p> Welcome to <span class="bold-word">my digital playground</span>, where lines of code <span class="underline-text">come to life</span>,<br> and creativity knows no bounds. As a <span class="bold-word">WordPress developer</span>, <br> I craft <span class="bold-word">virtual worlds</span> and turn <span class="underline-text">visions into reality</span>. <br> <span class="underline-text">Join me to work together</span> on an <span class="bold-word">amazing project</span>!</p>
+        <p> Welcome to <span class="bold-word">my digital playground</span>, where lines of code <span class="underline-text">come to life</span>,<br> and creativity knows no bounds. As a <span class="bold-word">WordPress developer</span>, <br> I craft <span class="bold-word">virtual worlds</span> and turn <span class="underline-text">visions into reality</span>. <br> <span class="underline-text">Join me to work together</span> on an <span class="bold-word">amazing project!</span></p>
     </div>
 
 
@@ -170,6 +171,5 @@
 </div>
 
 
-
-
+</main>
 <?php get_footer(); ?> 

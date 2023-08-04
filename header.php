@@ -20,7 +20,13 @@
             </div>
 
             <nav class="site-navigation">
-                
+
+                <button class="menu-toggle" aria-label="Menu Toggle" aria-controls="primary-menu" aria-expanded="false">
+                    <div class="burger">
+                        <span class="line"></span>
+                    </div>
+                </button>
+
                 <ul class="menu">
                     <?php
                     wp_nav_menu(array(

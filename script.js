@@ -59,4 +59,27 @@ function toggleModal(event) {
   });
 
   
- 
+  
+  // pour afficher le menu au clic du burger 
+
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.menu');
+  const main = document.querySelector('.main-body');
+
+  burger.addEventListener('click', () => {
+      burger.classList.toggle('active');                         // ajout de la classe active au burger
+      menu.classList.toggle('is-active');                         //affichage du menu au clic du burger     
+      main.classList.toggle('fixed');                            // ajout de la classe fixe pour masquer le main lorsque le menu burger est activé
+  });
+
+
+  // pour que le menu soit caché au clic des titres 
+const navLinks = document.querySelectorAll('.menu li');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.menu').classList.remove('is-active');
+    burger.classList.remove('active');
+    main.classList.remove('fixed');
+  });
+});

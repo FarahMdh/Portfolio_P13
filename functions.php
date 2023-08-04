@@ -16,6 +16,8 @@
     
     function portfolio_setup() {                                         // pour ajouter "image mise en avant" sur la création de posts 
         add_theme_support( 'post-thumbnails' );
+        add_theme_support('title-tag');
+        add_theme_support('custom-logo');                               // pour ajouter l'ajout de logo dans wordpress 
     }
     add_action( 'after_setup_theme', 'portfolio_setup' );
 
