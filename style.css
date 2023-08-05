@@ -12,15 +12,65 @@ Tags: (Mots-clés du thème, séparés par des virgules)
 */
 
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+/* Montserrat Font */
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat/Montserrat-Medium.eot') format('embedded-opentype'),
+         url('fonts/Montserrat/Montserrat-Medium.woff2') format('woff2'),
+         url('fonts/Montserrat/Montserrat-Medium.woff') format('woff'),
+         url('fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat/AnyConv.com__Montserrat-Regular.eot') format('embedded-opentype'),
+         url('fonts/Montserrat/Montserrat-Regular.woff2') format('woff2'),
+         url('fonts/Montserrat/Montserrat-Regular.woff') format('woff'),
+         url('fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat/AnyConv.com__Montserrat-SemiBold.eot') format('embedded-opentype'),
+         url('fonts/Montserrat/Montserrat-SemiBold.woff2') format('woff2'),
+         url('fonts/Montserrat/Montserrat-SemiBold.woff') format('woff'),
+         url('fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat/AnyConv.com__Montserrat-Bold.eot') format('embedded-opentype'),
+         url('fonts/Montserrat/Montserrat-Bold.woff2') format('woff2'),
+         url('fonts/Montserrat/Montserrat-Bold.woff') format('woff'),
+         url('fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat/AnyConv.com__Montserrat-BoldItalic.eot') format('embedded-opentype'),
+         url('fonts/Montserrat/Montserrat-BoldItalic.woff2') format('woff2'),
+         url('fonts/Montserrat/Montserrat-BoldItalic.woff') format('woff'),
+         url('fonts/Montserrat/Montserrat-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
 
 body {
     background-color: white;
     max-width: auto;
     margin: 0 auto;
     padding: 0;
-    font-family: 'Inter';
+    font-family: 'Montserrat';
 }
 
 /* HEADER */
@@ -87,6 +137,7 @@ body {
 
 .menu-toggle {
     border: none;       /* pour masquer le bouton */
+    background: none;   
 }
 
 /* FOOTER */ 
@@ -389,7 +440,6 @@ html {
 }
 
 .post-title {
-    font-family: 'Inter';
     font-style: italic; 
     font-weight: 700;
     text-transform: uppercase;
@@ -781,6 +831,7 @@ html {
 
     .menu-toggle {
         border: none;       /* pour masquer le bouton */
+        background: none;
     }
 }
 
@@ -830,6 +881,7 @@ html {
 
     .menu-toggle {
         border: none;       /* pour masquer le bouton */
+        background: none;
     }
 
     .menu {
@@ -844,7 +896,14 @@ html {
         justify-content: center;
         align-items: center;
         padding: 20px;
+        opacity: 0;   
     }
+
+    .menu.is-active {
+        display: flex; /* Afficher le menu au clic */
+        opacity: 1;
+    }
+
 
     .main-menu {
         flex-direction: column;
@@ -861,11 +920,6 @@ html {
         font-size: 25px;
         font-family: 'montserrat';
     }
-
-    .menu.is-active {
-        display: flex; /* Afficher le menu au clic */
-    }
-
 
     .burger {
         display: block;
