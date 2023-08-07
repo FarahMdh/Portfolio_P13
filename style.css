@@ -974,4 +974,33 @@ html {
         transform: translateY(0px) rotateZ(-45deg);
     }
 
+    /* single-sites */
+	.post-content {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 30px;
+    }
+        
+    .first-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+    }
+        
+    .post-title {
+        font-size: 30px;
+    }
+        
+    .post-thumbnail img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .langage-category {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
     }

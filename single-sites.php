@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<main class="main-body">
 
 <div class="single-post-container">
 
@@ -101,5 +102,6 @@
         <?php endif; ?>
 
 </div>
+</main>
 
 <?php get_footer(); ?> 

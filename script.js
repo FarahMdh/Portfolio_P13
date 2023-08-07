@@ -1,4 +1,3 @@
-console.log ("test")
 
 // apparition  de la modale de contact au clic de Contacter et disparition au clic de l'overlay
 const modalContainer = document.querySelector(".modal-container");
@@ -20,7 +19,9 @@ function closeOverlay() {
 // pour relier la modale de contact au bouton Contact sur l'accueil 
 const contactTrigger = document.querySelector("#contact-me");
 
-contactTrigger.addEventListener("click", toggleModal);
+if(contactTrigger){
+	contactTrigger.addEventListener("click", toggleModal);
+	}
 
 function toggleModal(event) {
   event.preventDefault();
@@ -69,7 +70,7 @@ function toggleModal(event) {
   burger.addEventListener('click', () => {
       burger.classList.toggle('active');                         // ajout de la classe active au burger
       menu.classList.toggle('is-active');                         //affichage du menu au clic du burger     
-      main.classList.toggle('fixed');                            // ajout de la classe fixe pour masquer le main lorsque le menu burger est activé
+      if(main){main.classList.toggle('fixed');}                             // ajout de la classe fixe pour masquer le main lorsque le menu burger est activé
   });
 
 
